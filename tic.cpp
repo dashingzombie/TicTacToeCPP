@@ -150,6 +150,7 @@ int main ()
           grid(a);
           return 0;
        }
-    }
+    }\
+    cout<<"It's a Draw";
 }
 //End Of Main
