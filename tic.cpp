@@ -72,18 +72,26 @@ int winner(char a[10], char p1 , char p2)
        }
        else if (a[3] == a[5] && a[5] == a[7])
        {
-          if (a[i] == p1)
+		   /* the case if player one chooses '+' and then selects 3->5->7
+		   while player two selects anything but it has to start from 1 fails.
+		   I have made a temporary fix but you should fix the logic and refine it a bit.*/
+		   cout << "p1 =" << p1 << endl;
+		   cout << "p2 = " << p2 << endl;
+		   cout << "a[7] =" << a[7] << endl; 
+		   cout << "a[i] = " << a[i] << endl;
+          if (a[7] == p1)
           {
              cout<<"Player 1 wins. \n";
              return 1;
           }
-          else if (a[i] == p2)
+          else if (a[7] == p2)
           {
              cout<<"Player 2 wins. \n";
              return 1;
           }
        }
-    }
+   }
+   return 0;
 }
 //End of Function
 
@@ -94,7 +102,7 @@ int main ()
     int guide,g;
     char p1,p2;
     //Assigns a ascii code of 1-9 to the character array
-    for(int i=1,j=49;i<10,j<58;j++,i++)
+    for(int i=1,j=49;j<58;j++,i++)
     {
        a[i]=j;
     }
@@ -150,7 +158,7 @@ int main ()
           grid(a);
           return 0;
        }
-    }\
+    }
     cout<<"It's a Draw";
 }
 //End Of Main
