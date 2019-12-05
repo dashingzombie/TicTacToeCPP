@@ -59,12 +59,12 @@ int winner(char a[10], char p1 , char p2)
        }
        else if (a[1] == a[5]  && a[5] == a[9] )
        {
-          if (a[i] == p1)
+          if (a[9] == p1)
           {
              cout<<"Player 1 wins. \n ";
              return 1;
           }
-          else if (a[i] == p2)
+          else if (a[9] == p2)
           {
              cout<<"Player 2 wins. \n";
              return 1;
@@ -72,18 +72,19 @@ int winner(char a[10], char p1 , char p2)
        }
        else if (a[3] == a[5] && a[5] == a[7])
        {
-          if (a[i] == p1)
+          if (a[3] == p1)
           {
              cout<<"Player 1 wins. \n";
              return 1;
           }
-          else if (a[i] == p2)
+          else if (a[3] == p2)
           {
              cout<<"Player 2 wins. \n";
              return 1;
           }
        }
     }
+    return 0;
 }
 //End of Function
 
@@ -150,7 +151,7 @@ int main ()
           grid(a);
           return 0;
        }
-    }\
+    }
     cout<<"It's a Draw";
 }
 //End Of Main
