@@ -122,6 +122,7 @@ int main ()
     //Game Starts
     for(int i=0;i<9;i=i+2)
     {
+
        grid(a);
        cout<<"Player 1 Enter from 1 to 9 ,where you want to place your guide";
        cin>>g;
@@ -137,7 +138,13 @@ int main ()
           grid(a);
           return 0;
        }
+
        grid(a);
+       if ( i==8 )
+       {
+           cout<<"It's a Draw";
+           return 0;
+       }
        cout<<"Player 2 Enter from 1 to 9 ,where you want to place your guide";
        cin>>g;
        if (g<1 || g>10 || a[g]==p1 || a[g]==p2)
@@ -145,6 +152,8 @@ int main ()
           cout<<"Wrong Choice. Restart";
           return 0;
        }
+
+
        chance2(a,g,p2);
        if (winner(a,p1,p2) == 1)
        {
@@ -152,6 +161,6 @@ int main ()
           return 0;
        }
     }
-    cout<<"It's a Draw";
+
 }
 //End Of Main
